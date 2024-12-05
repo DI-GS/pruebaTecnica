@@ -1,0 +1,319 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --white-color: #fff;
+  --blue-color: #4070f4;
+  --grey-color: #707070;
+  --grey-color-light: #aaa;
+}
+body {
+  background-color: #ffffff !important;
+  transition: all 0.5s ease;
+}
+
+/* navbar */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 15px 30px !important;
+  z-index: 1000;
+  box-shadow: 0 0 2px var(--grey-color-light);
+}
+.logo-lab{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo-care{
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFD700;
+}
+.navbar_content {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.navbar_content i {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+
+}
+
+.content {
+  padding: 20px;
+}
+
+.content-width{
+  width: 50%; 
+  text-align: center;
+}
+
+.cuadroVisualizacion {
+  border: 1px solid #ccc;
+  height: 150px;
+}
+.btn-color:hover{
+  color: #FFD700 !important;
+}
+
+
+.form-objetive{
+  height: 160px;
+  margin-top: 10px;
+}
+
+.padding{
+  padding-left: 200px !important;
+}
+
+
+.schedules_section{
+width: 70%;
+}
+
+.teacher_input{
+padding-left: 10px;
+border: none; /* Elimina el borde */
+outline: none;
+border-radius: 10px;
+}
+
+.teacher_label{
+  padding-left: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.schedules_section th {
+  background-color: #808080;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td.recess {
+  background-color: #000000 ;
+  color: #ffffff;
+}
+
+td.editable {
+  cursor: pointer;
+  background-color: #B5B2B2;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+td.editable:hover {
+  background-color: #4B4B4B;
+}
+
+td.teacher {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+td.group {
+  background-color: #FFD700;
+  color: #000000 !important;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos para la tabla */
+#schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#schedule-table th, #schedule-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos para la tabla responsive */
+@media screen and (max-width: 600px) {
+  #schedule-table {
+      display: block;
+  }
+  
+  #schedule-table thead {
+      display: none;
+  }
+
+  #schedule-table tbody, #schedule-table tr, #schedule-table td {
+      display: block;
+      width: 100%;
+      text-align: left;
+  }
+
+  #schedule-table td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+  }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registroU:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.logo_item img {
+  display: block;
+  width: 180px;
+  height: 40px;
+}
+
+.logout_item {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+.logout-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1);
+}
