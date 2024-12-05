@@ -13,7 +13,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
    npm install
    
 ## Ejecución del Proyecto en Modo Desarrollo 
-Para iniciar el servidor en modo desarrollo, utiliza el siguiente comando:
+Para iniciar tanto el frontend como el backend en modo desarrollo, utiliza el siguiente comando en ambos proyectos:
  ```bash
 npm run dev
  ```
