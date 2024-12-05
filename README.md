@@ -25,8 +25,8 @@ npm run build
  ```
 ## Descripción Breve de la Arquitectura
 1. Arquitectura Cliente-Servidor
-Frontend (Cliente): Implementado con Vue 3 para manejar la interfaz de usuario. El cliente envía solicitudes al backend para obtener datos y renderizar la información de manera interactiva.
-Backend (Servidor): Desarrollado con Node.js y Express, encargado de procesar las solicitudes del cliente, realizar la lógica de negocio, manejar la base de datos y devolver respuestas en formato JSON.
+- **Frontend** (Cliente): Implementado con Vue 3 para manejar la interfaz de usuario. El cliente envía solicitudes al backend para obtener datos y renderizar la información de manera interactiva.
+- **Backend** (Servidor): Desarrollado con Node.js y Express, encargado de procesar las solicitudes del cliente, realizar la lógica de negocio, manejar la base de datos y devolver respuestas en formato JSON.
 
 2. Comunicación mediante APIs RESTful
 La interacción entre el cliente y el servidor se realiza a través de APIs RESTful, donde el cliente consume los datos expuestos por el backend.
